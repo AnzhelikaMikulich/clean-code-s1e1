@@ -32,27 +32,30 @@
 	width: 500px;
 	margin: 0 auto 0;
 }
-.task {
+.my-tasks__input,
+.todo-list__task {
 	width: 56%;
 	display: inline-block;
 	flex-grow: 1;
 }
-.task-row {
+.my-tasks__row {
 	display: flex;
 }
-.list {
+.todo-list__content {
 	margin: 0;
 	padding: 0px;
 }
-.item,
-.title {
+.todo-list__text,
+.todo-list__title {
 	list-style: none;
 }
-.input,
-.btn {
+.todo-list__input,
+.todo-list__button,
+.my-tasks__button {
 	outline: none;
 }
-.btn {
+.todo-list__button,
+.my-tasks__button {
 	background: none;
 	border: 0px;
 	color: #888;
@@ -61,12 +64,9 @@
 	font-family: Lato, sans-serif;
 	cursor: pointer;
 }
-.btn:hover {
-	color: #3a3a3a;
-}
 /* Heading */
-.title,
-.add-task {
+.todo-list__title,
+.my-tasks__title {
 	color: #333;
 	font-weight: 700;
 	font-size: 15px;
@@ -75,7 +75,8 @@
 	margin: 0;
 	text-transform: uppercase;
 }
-.input {
+.todo-list__input,
+.my-tasks__input {
 	margin: 0;
 	font-size: 18px;
 	line-height: 18px;
@@ -87,24 +88,26 @@
 	font-family: Lato, sans-serif;
 	color: #888;
 }
-.input:focus {
+.todo-list__input:focus,
+.my-tasks__input:focus {
 	color: #333;
 }
 
 /* New Task */
-.add-task {
+.my-tasks__title {
 	display: block;
 	margin: 0 0 20px;
 }
 #new-task {
 	width: 318px;
 }
-.btn:hover {
+.todo-list__button:hover,
+.my-tasks__button:hover {
 	color: #0fc57c;
 }
 
 /* Task list */
-.item {
+.todo-list__text {
 	overflow: hidden;
 	padding: 20px 0;
 	border-bottom: 1px solid #eee;
@@ -113,29 +116,29 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.item > * {
+.todo-list__text > * {
 	vertical-align: middle;
 }
 
-.item > input[type='checkbox'] {
+.todo-list__text > input[type='checkbox'] {
 	margin: 0 10px;
 }
-.item > label {
+.todo-list__text > label {
 	padding-left: 10px;
 	box-sizing: border-box;
 	font-size: 18px;
 	width: 226px;
 }
 
-.item > .btn.delete:hover {
+.todo-list__text > .todo-list__button.delete:hover {
 	color: #cf2323;
 }
-.btn.delete img {
+.todo-list__button.delete img {
 	height: 2em;
 	transform: rotateZ(45deg);
 	transition: transform 200ms ease-in;
 }
-.btn.delete img:hover {
+.todo-list__button.delete img:hover {
 	transform: rotateZ(0);
 }
 
@@ -146,7 +149,7 @@
 }
 
 /* Edit Task */
-.item input[type='text'] {
+.todo-list__text input[type='text'] {
 	display: none;
 }
 
