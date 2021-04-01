@@ -149,16 +149,16 @@
 }
 
 /* Edit Task */
-.todo-list__text input[type='text'] {
+.list__input {
 	display: none;
 }
 
-.edit-mode input[type='text'] {
+.edit-mode .list__input {
 	display: inline-block;
 	width: 224px;
 	flex-grow: 1;
 }
 
-.edit-mode label {
+.edit-mode .list__label {
 	display: none;
 }
